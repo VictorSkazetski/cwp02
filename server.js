@@ -35,7 +35,7 @@ const server = net.createServer((client) => {
   });
  
     client.on('end', () => {
-     // seed++;
+      //seed++;
       let str = "";
       for (let i = 0; i < history.length; i++) {
         str += history[i];
@@ -58,5 +58,5 @@ function log(str, client) {
   write.writeFile(path + "client_" + client.id.toString() + ".txt", str,() => {
     console.log("YRA");
   });
-  
+
 }
